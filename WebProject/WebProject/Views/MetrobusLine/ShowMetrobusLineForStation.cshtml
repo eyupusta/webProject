@@ -1,0 +1,159 @@
+﻿@using WebProject.Models.Entity
+@model List<MetrobusLines_Stations>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Metrobus Lines</title>
+    <link rel="shortcut icon" href="~/Content/images/icon.ico">
+    <link href="~/RailSystemStyle.css" rel="stylesheet" />
+    <script src="~/Content/Clock.js"></script>
+</head>
+<body onload="startTime()">
+    <div>
+
+
+        <div id="navBar">
+            <ul>
+                <li><a href="http://localhost:50276/HomePage/HomePage">Home</a></li>
+                <li><a href="http://localhost:50276/RailSystem/RailSystem">Rail Systems</a></li>
+                <li><a href="http://localhost:50276/MetrobusLine/MetrobusLine">Metrobus Lines</a></li>
+                <li><a href="http://localhost:50276/BusLine/BusLine">Bus Lines</a></li>
+                <li><a href="http://localhost:50276/FerryLine/FerryLine">Ferry Lines</a></li>
+                <li><a href="http://localhost:50276/Contact/Contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div id="navBarRight">
+            <ul>
+                <li id="clock"></li>
+            </ul>
+        </div>
+
+        <div id="leftArea">
+            <div id="navBar1">
+                <ul>
+                    <li><a href="http://localhost:50276/MetrobusLine/ShowStationForMetrobusLine?line=34">34</a></li>
+                    <li><a href="http://localhost:50276/MetrobusLine/ShowStationForMetrobusLine?line=34A">34A</a></li>
+                    <li><a href="http://localhost:50276/MetrobusLine/ShowStationForMetrobusLine?line=34AS">34AS</a></li>
+                    <li><a href="http://localhost:50276/MetrobusLine/ShowStationForMetrobusLine?line=34BZ">34BZ</a></li>
+                    <li><a href="http://localhost:50276/MetrobusLine/ShowStationForMetrobusLine?line=34C">34C</a></li>
+                    <li><a href="http://localhost:50276/MetrobusLine/ShowStationForMetrobusLine?line=34G">34G</a></li>
+                    <li><a href="http://localhost:50276/MetrobusLine/ShowStationForMetrobusLine?line=34U">34U</a></li>
+                    <li><a href="http://localhost:50276/MetrobusLine/ShowStationForMetrobusLine?line=34Z">34Z</a></li>
+                    <li><img src="~/Content/images/IETTLogo.png" width="50%" style="padding:15px" /></li>
+                </ul>
+            </div>
+        </div>
+
+        <style>
+            table.customTable {
+                width: 100%;
+                background-color: #FFFFFF;
+                border-collapse: collapse;
+                border-width: 2px;
+                border-color: #FFCA28;
+                border-style: solid;
+                color: #000000;
+            }
+
+                table.customTable td, table.customTable th {
+                    border-width: 2px;
+                    border-color: #FFCA28;
+                    border-style: solid;
+                    padding: 5px;
+                }
+
+                table.customTable thead {
+                    background-color: #FFCA28;
+                }
+        </style>
+
+        <div id="middleArea">
+            <table class="customTable">
+                <thead>
+                    <tr>
+                        <th>Line ID</th>
+                        <th>Line Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Metrobus_Lines.LineID</td>
+                            <td>@item.Metrobus_Lines.LineName</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+
+        <div id="rightArea">
+            <br />
+            <p>Show station info for line:</p>
+            @using (Html.BeginForm("ShowStationForMetrobusLine", "MetrobusLine", FormMethod.Get))
+            {
+                @Html.TextBox("line")
+                <input type="submit" value="Search" />
+            }
+            <br />
+            <br />
+            <br />
+            <br />
+            <p>Show time info for line:</p>
+            @using (Html.BeginForm("ShowTimeForMetrobusLine", "MetrobusLine", FormMethod.Get))
+            {
+                @Html.TextBox("line")
+                <input type="submit" value="Search" />
+            }
+            <br />
+            <br />
+            <br />
+            <br />
+            <p>Show line info for station:</p>
+            @using (Html.BeginForm("ShowMetrobusLineForStation", "MetrobusLine", FormMethod.Get))
+            {
+                @Html.TextBox("station")
+                <input type="submit" value="Search" />
+            }
+            <br />
+            <br />
+            <br />
+            <br />
+            <img src="~/Content/images/BeyazMasaLogo.png" width="50%" />
+        </div>
+
+        <div id="footerLeft">
+            <ul>
+                <li><a href="https://www.iett.istanbul/">IETT</a></li>
+                <li><a href="https://www.metro.istanbul/">Metro İstanbul</a></li>
+                <li><a href="https://www.sehirhatlari.istanbul/">Şehir Hatları</a></li>
+                <li><a href="https://beyazmasa.ibb.istanbul/application/beyazmasa">Beyaz Masa</a></li>
+            </ul>
+        </div>
+
+        <div id="footerMiddle">
+            <ul>
+                <li><a href="http://localhost:50276/HomePage/HomePage">Home</a></li>
+                <li><a href="http://localhost:50276/Contact/Contact">Contact</a></li>
+                <li><a href="http://localhost:50276/Contact/AboutUs">About Us</a></li>
+            </ul>
+        </div>
+
+        <div id="footerRight">
+            <ul>
+                <li><a href="https://tr-tr.facebook.com/"> <img src="~/Content/images/facebook.png" width="15px" class="left" />Facebook</a></li>
+                <li><a href="https://twitter.com/login?lang=tr"><img src="~/Content/images/twitter.png" width="15px" class="left" />Twitter</a></li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,644 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TransportSystemModelStoreContainer" CdmEntityContainer="TransportSystemEntities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="TransportSystemModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bus_Lines">
+      <EntityTypeMapping TypeName="TransportSystemModel.Bus_Lines">
+        <MappingFragment StoreEntitySet="Bus_Lines">
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+          <ScalarProperty Name="OpenningYear" ColumnName="OpenningYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Buses">
+      <EntityTypeMapping TypeName="TransportSystemModel.Buses">
+        <MappingFragment StoreEntitySet="Buses">
+          <ScalarProperty Name="BusID" ColumnName="BusID" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="YearOfProduction" ColumnName="YearOfProduction" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BusLines_Buses">
+      <EntityTypeMapping TypeName="TransportSystemModel.BusLines_Buses">
+        <MappingFragment StoreEntitySet="BusLines_Buses">
+          <ScalarProperty Name="BlbID" ColumnName="BlbID" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="BusID" ColumnName="BusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BusLines_Drivers">
+      <EntityTypeMapping TypeName="TransportSystemModel.BusLines_Drivers">
+        <MappingFragment StoreEntitySet="BusLines_Drivers">
+          <ScalarProperty Name="BldID" ColumnName="BldID" />
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BusLines_Stations">
+      <EntityTypeMapping TypeName="TransportSystemModel.BusLines_Stations">
+        <MappingFragment StoreEntitySet="BusLines_Stations">
+          <ScalarProperty Name="BlsID" ColumnName="BlsID" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="StationID" ColumnName="StationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BusLines_Times">
+      <EntityTypeMapping TypeName="TransportSystemModel.BusLines_Times">
+        <MappingFragment StoreEntitySet="BusLines_Times">
+          <ScalarProperty Name="BltID" ColumnName="BltID" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="TimeID" ColumnName="TimeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Department">
+      <EntityTypeMapping TypeName="TransportSystemModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Drivers">
+      <EntityTypeMapping TypeName="TransportSystemModel.Drivers">
+        <MappingFragment StoreEntitySet="Drivers">
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="HomeAddress" ColumnName="HomeAddress" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ferries">
+      <EntityTypeMapping TypeName="TransportSystemModel.Ferries">
+        <MappingFragment StoreEntitySet="Ferries">
+          <ScalarProperty Name="FerryID" ColumnName="FerryID" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="YearOfProduction" ColumnName="YearOfProduction" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ferry_Lines">
+      <EntityTypeMapping TypeName="TransportSystemModel.Ferry_Lines">
+        <MappingFragment StoreEntitySet="Ferry_Lines">
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+          <ScalarProperty Name="OpenningYear" ColumnName="OpenningYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FerryLines_Drivers">
+      <EntityTypeMapping TypeName="TransportSystemModel.FerryLines_Drivers">
+        <MappingFragment StoreEntitySet="FerryLines_Drivers">
+          <ScalarProperty Name="FldID" ColumnName="FldID" />
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FerryLines_Stations">
+      <EntityTypeMapping TypeName="TransportSystemModel.FerryLines_Stations">
+        <MappingFragment StoreEntitySet="FerryLines_Stations">
+          <ScalarProperty Name="FlsID" ColumnName="FlsID" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="StationID" ColumnName="StationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FerryLines_Times">
+      <EntityTypeMapping TypeName="TransportSystemModel.FerryLines_Times">
+        <MappingFragment StoreEntitySet="FerryLines_Times">
+          <ScalarProperty Name="FltID" ColumnName="FltID" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="TimeID" ColumnName="TimeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Metrobus_Lines">
+      <EntityTypeMapping TypeName="TransportSystemModel.Metrobus_Lines">
+        <MappingFragment StoreEntitySet="Metrobus_Lines">
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+          <ScalarProperty Name="OpenningYear" ColumnName="OpenningYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MetrobusLines_Buses">
+      <EntityTypeMapping TypeName="TransportSystemModel.MetrobusLines_Buses">
+        <MappingFragment StoreEntitySet="MetrobusLines_Buses">
+          <ScalarProperty Name="MlbID" ColumnName="MlbID" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="BusID" ColumnName="BusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MetrobusLines_Drivers">
+      <EntityTypeMapping TypeName="TransportSystemModel.MetrobusLines_Drivers">
+        <MappingFragment StoreEntitySet="MetrobusLines_Drivers">
+          <ScalarProperty Name="MldID" ColumnName="MldID" />
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MetrobusLines_Stations">
+      <EntityTypeMapping TypeName="TransportSystemModel.MetrobusLines_Stations">
+        <MappingFragment StoreEntitySet="MetrobusLines_Stations">
+          <ScalarProperty Name="MlsID" ColumnName="MlsID" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="StationID" ColumnName="StationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MetrobusLines_Times">
+      <EntityTypeMapping TypeName="TransportSystemModel.MetrobusLines_Times">
+        <MappingFragment StoreEntitySet="MetrobusLines_Times">
+          <ScalarProperty Name="MltID" ColumnName="MltID" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="TimeID" ColumnName="TimeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rail_Systems">
+      <EntityTypeMapping TypeName="TransportSystemModel.Rail_Systems">
+        <MappingFragment StoreEntitySet="Rail_Systems">
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+          <ScalarProperty Name="OpenningYear" ColumnName="OpenningYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RailSystems_Drivers">
+      <EntityTypeMapping TypeName="TransportSystemModel.RailSystems_Drivers">
+        <MappingFragment StoreEntitySet="RailSystems_Drivers">
+          <ScalarProperty Name="RsdID" ColumnName="RsdID" />
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RailSystems_Stations">
+      <EntityTypeMapping TypeName="TransportSystemModel.RailSystems_Stations">
+        <MappingFragment StoreEntitySet="RailSystems_Stations">
+          <ScalarProperty Name="RssID" ColumnName="RssID" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="StationID" ColumnName="StationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RailSystems_Times">
+      <EntityTypeMapping TypeName="TransportSystemModel.RailSystems_Times">
+        <MappingFragment StoreEntitySet="RailSystems_Times">
+          <ScalarProperty Name="RstID" ColumnName="RstID" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="TimeID" ColumnName="TimeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RailSystems_Transfers">
+      <EntityTypeMapping TypeName="TransportSystemModel.RailSystems_Transfers">
+        <MappingFragment StoreEntitySet="RailSystems_Transfers">
+          <ScalarProperty Name="TransferID" ColumnName="TransferID" />
+          <ScalarProperty Name="FromLineID" ColumnName="FromLineID" />
+          <ScalarProperty Name="ToLineID" ColumnName="ToLineID" />
+          <ScalarProperty Name="StationID" ColumnName="StationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stations">
+      <EntityTypeMapping TypeName="TransportSystemModel.Stations">
+        <MappingFragment StoreEntitySet="Stations">
+          <ScalarProperty Name="StationID" ColumnName="StationID" />
+          <ScalarProperty Name="StationName" ColumnName="StationName" />
+          <ScalarProperty Name="StationType" ColumnName="StationType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Times">
+      <EntityTypeMapping TypeName="TransportSystemModel.Times">
+        <MappingFragment StoreEntitySet="Times">
+          <ScalarProperty Name="TimeID" ColumnName="TimeID" />
+          <ScalarProperty Name="Times1" ColumnName="Times" />
+          <ScalarProperty Name="TimeType" ColumnName="TimeType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trains">
+      <EntityTypeMapping TypeName="TransportSystemModel.Trains">
+        <MappingFragment StoreEntitySet="Trains">
+          <ScalarProperty Name="TrainID" ColumnName="TrainID" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="YearOfProduction" ColumnName="YearOfProduction" />
+          <ScalarProperty Name="NumberOfWagons" ColumnName="NumberOfWagons" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShowBusInfoAboutBusLines">
+      <EntityTypeMapping TypeName="TransportSystemModel.ShowBusInfoAboutBusLines">
+        <MappingFragment StoreEntitySet="ShowBusInfoAboutBusLines">
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="YearOfProduction" ColumnName="YearOfProduction" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShowBusInfoAboutMetrobusLines">
+      <EntityTypeMapping TypeName="TransportSystemModel.ShowBusInfoAboutMetrobusLines">
+        <MappingFragment StoreEntitySet="ShowBusInfoAboutMetrobusLines">
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="YearOfProduction" ColumnName="YearOfProduction" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShowBusLinesInfoAboutDriver">
+      <EntityTypeMapping TypeName="TransportSystemModel.ShowBusLinesInfoAboutDriver">
+        <MappingFragment StoreEntitySet="ShowBusLinesInfoAboutDriver">
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShowDepartmentInfoAboutDriver">
+      <EntityTypeMapping TypeName="TransportSystemModel.ShowDepartmentInfoAboutDriver">
+        <MappingFragment StoreEntitySet="ShowDepartmentInfoAboutDriver">
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShowFerryInfoAboutFerryLines">
+      <EntityTypeMapping TypeName="TransportSystemModel.ShowFerryInfoAboutFerryLines">
+        <MappingFragment StoreEntitySet="ShowFerryInfoAboutFerryLines">
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="YearOfProduction" ColumnName="YearOfProduction" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShowFerryLinesInfoAboutDriver">
+      <EntityTypeMapping TypeName="TransportSystemModel.ShowFerryLinesInfoAboutDriver">
+        <MappingFragment StoreEntitySet="ShowFerryLinesInfoAboutDriver">
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShowMetrobusLinesInfoAboutDriver">
+      <EntityTypeMapping TypeName="TransportSystemModel.ShowMetrobusLinesInfoAboutDriver">
+        <MappingFragment StoreEntitySet="ShowMetrobusLinesInfoAboutDriver">
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShowRailSystemsInfoAboutDriver">
+      <EntityTypeMapping TypeName="TransportSystemModel.ShowRailSystemsInfoAboutDriver">
+        <MappingFragment StoreEntitySet="ShowRailSystemsInfoAboutDriver">
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShowStationInfoAboutBusLines">
+      <EntityTypeMapping TypeName="TransportSystemModel.ShowStationInfoAboutBusLines">
+        <MappingFragment StoreEntitySet="ShowStationInfoAboutBusLines">
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+          <ScalarProperty Name="StationName" ColumnName="StationName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShowStationInfoAboutFerryLines">
+      <EntityTypeMapping TypeName="TransportSystemModel.ShowStationInfoAboutFerryLines">
+        <MappingFragment StoreEntitySet="ShowStationInfoAboutFerryLines">
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+          <ScalarProperty Name="StationName" ColumnName="StationName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShowStationInfoAboutMetrobusLines">
+      <EntityTypeMapping TypeName="TransportSystemModel.ShowStationInfoAboutMetrobusLines">
+        <MappingFragment StoreEntitySet="ShowStationInfoAboutMetrobusLines">
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+          <ScalarProperty Name="StationName" ColumnName="StationName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShowStationInfoAboutRailSystems">
+      <EntityTypeMapping TypeName="TransportSystemModel.ShowStationInfoAboutRailSystems">
+        <MappingFragment StoreEntitySet="ShowStationInfoAboutRailSystems">
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+          <ScalarProperty Name="StationName" ColumnName="StationName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShowTimeInfoAboutBusLines">
+      <EntityTypeMapping TypeName="TransportSystemModel.ShowTimeInfoAboutBusLines">
+        <MappingFragment StoreEntitySet="ShowTimeInfoAboutBusLines">
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+          <ScalarProperty Name="Times" ColumnName="Times" />
+          <ScalarProperty Name="TimeType" ColumnName="TimeType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShowTimeInfoAboutFerryLines">
+      <EntityTypeMapping TypeName="TransportSystemModel.ShowTimeInfoAboutFerryLines">
+        <MappingFragment StoreEntitySet="ShowTimeInfoAboutFerryLines">
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+          <ScalarProperty Name="Times" ColumnName="Times" />
+          <ScalarProperty Name="TimeType" ColumnName="TimeType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShowTimeInfoAboutMetrobusLines">
+      <EntityTypeMapping TypeName="TransportSystemModel.ShowTimeInfoAboutMetrobusLines">
+        <MappingFragment StoreEntitySet="ShowTimeInfoAboutMetrobusLines">
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+          <ScalarProperty Name="Times" ColumnName="Times" />
+          <ScalarProperty Name="TimeType" ColumnName="TimeType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShowTimeInfoAboutRailSystems">
+      <EntityTypeMapping TypeName="TransportSystemModel.ShowTimeInfoAboutRailSystems">
+        <MappingFragment StoreEntitySet="ShowTimeInfoAboutRailSystems">
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+          <ScalarProperty Name="Times" ColumnName="Times" />
+          <ScalarProperty Name="TimeType" ColumnName="TimeType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShowTrainInfoAboutRailSystems">
+      <EntityTypeMapping TypeName="TransportSystemModel.ShowTrainInfoAboutRailSystems">
+        <MappingFragment StoreEntitySet="ShowTrainInfoAboutRailSystems">
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="YearOfProduction" ColumnName="YearOfProduction" />
+          <ScalarProperty Name="NumberOfWagons" ColumnName="NumberOfWagons" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShowTransferInfo">
+      <EntityTypeMapping TypeName="TransportSystemModel.ShowTransferInfo">
+        <MappingFragment StoreEntitySet="ShowTransferInfo">
+          <ScalarProperty Name="FromLineID" ColumnName="FromLineID" />
+          <ScalarProperty Name="ToLineID" ColumnName="ToLineID" />
+          <ScalarProperty Name="StationName" ColumnName="StationName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="TransportSystemModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="TransportSystemModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="TransportSystemModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="TransportSystemModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransportSystemModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="TransportSystemModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransportSystemModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="TransportSystemModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="TransportSystemModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="ShowBusInfoForBusLine" FunctionName="TransportSystemModel.Store.ShowBusInfoForBusLine">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransportSystemModel.ShowBusInfoForBusLine_Result">
+          <ScalarProperty Name="BusID" ColumnName="BusID" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="YearOfProduction" ColumnName="YearOfProduction" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ShowBusInfoForMetrobusLine" FunctionName="TransportSystemModel.Store.ShowBusInfoForMetrobusLine">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransportSystemModel.ShowBusInfoForMetrobusLine_Result">
+          <ScalarProperty Name="BusID" ColumnName="BusID" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="YearOfProduction" ColumnName="YearOfProduction" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ShowBusLinesInfoForStation" FunctionName="TransportSystemModel.Store.ShowBusLinesInfoForStation">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransportSystemModel.ShowBusLinesInfoForStation_Result">
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ShowDriverInfoForBusLine" FunctionName="TransportSystemModel.Store.ShowDriverInfoForBusLine">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransportSystemModel.ShowDriverInfoForBusLine_Result">
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ShowDriverInfoForDepartment" FunctionName="TransportSystemModel.Store.ShowDriverInfoForDepartment">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransportSystemModel.ShowDriverInfoForDepartment_Result">
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ShowDriverInfoForFerryLine" FunctionName="TransportSystemModel.Store.ShowDriverInfoForFerryLine">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransportSystemModel.ShowDriverInfoForFerryLine_Result">
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ShowDriverInfoForMetrobusLine" FunctionName="TransportSystemModel.Store.ShowDriverInfoForMetrobusLine">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransportSystemModel.ShowDriverInfoForMetrobusLine_Result">
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ShowDriverInfoForRailSystem" FunctionName="TransportSystemModel.Store.ShowDriverInfoForRailSystem">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransportSystemModel.ShowDriverInfoForRailSystem_Result">
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ShowFerryInfoForFerryLine" FunctionName="TransportSystemModel.Store.ShowFerryInfoForFerryLine">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransportSystemModel.ShowFerryInfoForFerryLine_Result">
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="YearOfProduction" ColumnName="YearOfProduction" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ShowFerryLinesInfoForStation" FunctionName="TransportSystemModel.Store.ShowFerryLinesInfoForStation">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransportSystemModel.ShowFerryLinesInfoForStation_Result">
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ShowMetrobusLinesInfoForStation" FunctionName="TransportSystemModel.Store.ShowMetrobusLinesInfoForStation">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransportSystemModel.ShowMetrobusLinesInfoForStation_Result">
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ShowRailSystemsInfoForStation" FunctionName="TransportSystemModel.Store.ShowRailSystemsInfoForStation">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransportSystemModel.ShowRailSystemsInfoForStation_Result">
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ShowStationInfoForBusLine" FunctionName="TransportSystemModel.Store.ShowStationInfoForBusLine" />
+    <FunctionImportMapping FunctionImportName="ShowStationInfoForFerryLine" FunctionName="TransportSystemModel.Store.ShowStationInfoForFerryLine" />
+    <FunctionImportMapping FunctionImportName="ShowStationInfoForMetrobusLine" FunctionName="TransportSystemModel.Store.ShowStationInfoForMetrobusLine" />
+    <FunctionImportMapping FunctionImportName="ShowStationInfoForRailSystem" FunctionName="TransportSystemModel.Store.ShowStationInfoForRailSystem" />
+    <FunctionImportMapping FunctionImportName="ShowTimeInfoForBusLine" FunctionName="TransportSystemModel.Store.ShowTimeInfoForBusLine">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransportSystemModel.ShowTimeInfoForBusLine_Result">
+          <ScalarProperty Name="Times" ColumnName="Times" />
+          <ScalarProperty Name="TimeType" ColumnName="TimeType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ShowTimeInfoForFerryLine" FunctionName="TransportSystemModel.Store.ShowTimeInfoForFerryLine">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransportSystemModel.ShowTimeInfoForFerryLine_Result">
+          <ScalarProperty Name="Times" ColumnName="Times" />
+          <ScalarProperty Name="TimeType" ColumnName="TimeType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ShowTimeInfoForMetrobusLine" FunctionName="TransportSystemModel.Store.ShowTimeInfoForMetrobusLine">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransportSystemModel.ShowTimeInfoForMetrobusLine_Result">
+          <ScalarProperty Name="Times" ColumnName="Times" />
+          <ScalarProperty Name="TimeType" ColumnName="TimeType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ShowTimeInfoForRailSystem" FunctionName="TransportSystemModel.Store.ShowTimeInfoForRailSystem">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransportSystemModel.ShowTimeInfoForRailSystem_Result">
+          <ScalarProperty Name="Times" ColumnName="Times" />
+          <ScalarProperty Name="TimeType" ColumnName="TimeType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ShowTrainInfoForRailSystem" FunctionName="TransportSystemModel.Store.ShowTrainInfoForRailSystem">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransportSystemModel.ShowTrainInfoForRailSystem_Result">
+          <ScalarProperty Name="TrainID" ColumnName="TrainID" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="YearOfProduction" ColumnName="YearOfProduction" />
+          <ScalarProperty Name="NumberOfWagons" ColumnName="NumberOfWagons" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ShowTransferInformation" FunctionName="TransportSystemModel.Store.ShowTransferInformation">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TransportSystemModel.ShowTransferInformation_Result">
+          <ScalarProperty Name="FromLineID" ColumnName="FromLineID" />
+          <ScalarProperty Name="ToLineID" ColumnName="ToLineID" />
+          <ScalarProperty Name="StationName" ColumnName="StationName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

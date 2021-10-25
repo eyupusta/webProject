@@ -1,0 +1,166 @@
+﻿@using WebProject.Models.Entity
+@model List<RailSystems_Stations>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Rail Systems</title>
+    <link rel="shortcut icon" href="~/Content/images/icon.ico">
+    <link href="~/RailSystemStyle.css" rel="stylesheet" />
+    <script src="~/Content/Clock.js"></script>
+</head>
+<body onload="startTime()">
+    <div>
+
+
+        <div id="navBar">
+            <ul>
+                <li><a href="http://localhost:50276/HomePage/HomePage">Home</a></li>
+                <li><a href="http://localhost:50276/RailSystem/RailSystem">Rail Systems</a></li>
+                <li><a href="http://localhost:50276/MetrobusLine/MetrobusLine">Metrobus Lines</a></li>
+                <li><a href="http://localhost:50276/BusLine/BusLine">Bus Lines</a></li>
+                <li><a href="http://localhost:50276/FerryLine/FerryLine">Ferry Lines</a></li>
+                <li><a href="http://localhost:50276/Contact/Contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div id="navBarRight">
+            <ul>
+                <li id="clock"></li>
+            </ul>
+        </div>
+
+        <div id="leftArea">
+            <div id="navBar1">
+                <ul>
+                    <li><a href="http://localhost:50276/RailSystem/ShowStationFormRailSystem?line=M1A">M1A</a></li>
+                    <li><a href="http://localhost:50276/RailSystem/ShowStationFormRailSystem?line=M1B">M1B</a></li>
+                    <li><a href="http://localhost:50276/RailSystem/ShowStationFormRailSystem?line=M2">M2</a></li>
+                    <li><a href="http://localhost:50276/RailSystem/ShowStationFormRailSystem?line=M3">M3</a></li>
+                    <li><a href="http://localhost:50276/RailSystem/ShowStationFormRailSystem?line=M4">M4</a></li>
+                    <li><a href="http://localhost:50276/RailSystem/ShowStationFormRailSystem?line=M5">M5</a></li>
+                    <li><a href="http://localhost:50276/RailSystem/ShowStationFormRailSystem?line=M6">M6</a></li>
+                    <li><a href="http://localhost:50276/RailSystem/ShowStationFormRailSystem?line=T1">T1</a></li>
+                    <li><a href="http://localhost:50276/RailSystem/ShowStationFormRailSystem?line=T2">T2</a></li>
+                    <li><a href="http://localhost:50276/RailSystem/ShowStationFormRailSystem?line=T3">T3</a></li>
+                    <li><a href="http://localhost:50276/RailSystem/ShowStationFormRailSystem?line=T4">T4</a></li>
+                    <li><a href="http://localhost:50276/RailSystem/ShowStationFormRailSystem?line=TF1">TF1</a></li>
+                    <li><a href="http://localhost:50276/RailSystem/ShowStationFormRailSystem?line=TF2">TF2</a></li>
+                    <li><a href="http://localhost:50276/RailSystem/ShowStationFormRailSystem?line=MARMARAY">MARMARAY</a></li>
+                    <li><a href="http://localhost:50276/RailSystem/ShowStationFormRailSystem?line=F1">F1</a></li>
+                    <li><a href="http://localhost:50276/RailSystem/ShowStationFormRailSystem?line=F2">F2</a></li>
+                    <li><a href="http://localhost:50276/RailSystem/ShowStationFormRailSystem?line=F3">F3</a></li>
+                    <li><img src="~/Content/images/MetroIstanbulLogo.png" width="50%" style="padding:15px" /></li>
+                </ul>
+            </div>
+        </div>
+
+        <style>
+            table.customTable {
+                width: 100%;
+                background-color: #FFFFFF;
+                border-collapse: collapse;
+                border-width: 2px;
+                border-color: #FFCA28;
+                border-style: solid;
+                color: #000000;
+            }
+
+                table.customTable td, table.customTable th {
+                    border-width: 2px;
+                    border-color: #FFCA28;
+                    border-style: solid;
+                    padding: 5px;
+                }
+
+                table.customTable thead {
+                    background-color: #FFCA28;
+                }
+        </style>
+
+        <div id="middleArea">
+            <table class="customTable">
+                <thead>
+                    <tr>
+                        <th>Station Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Stations.StationName</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div id="rightArea">
+            <br />
+            <p>Show station info for line:</p>
+            @using (Html.BeginForm("ShowStationFormRailSystem", "RailSystem", FormMethod.Get))
+            {
+                @Html.TextBox("line")
+                <input type="submit" value="Search" />
+            }
+            <br />
+            <br />
+            <br />
+            <br />
+            <p>Show time info for line:</p>
+            @using (Html.BeginForm("ShowTimeFormRailSystem", "RailSystem", FormMethod.Get))
+            {
+                @Html.TextBox("line")
+                <input type="submit" value="Search" />
+            }
+            <br />
+            <br />
+            <br />
+            <br />
+            <p>Show line info for station:</p>
+            @using (Html.BeginForm("ShowLineFormStation", "RailSystem", FormMethod.Get))
+            {
+                @Html.TextBox("station")
+                <input type="submit" value="Search" />
+            }
+            <br />
+            <br />
+            <br />
+            <br />
+            <img src="~/Content/images/BeyazMasaLogo.png" width="50%" />
+        </div>
+
+        <div id="footerLeft">
+            <ul>
+                <li><a href="https://www.iett.istanbul/">IETT</a></li>
+                <li><a href="https://www.metro.istanbul/">Metro İstanbul</a></li>
+                <li><a href="https://www.sehirhatlari.istanbul/">Şehir Hatları</a></li>
+                <li><a href="https://beyazmasa.ibb.istanbul/application/beyazmasa">Beyaz Masa</a></li>
+            </ul>
+        </div>
+
+        <div id="footerMiddle">
+            <ul>
+                <li><a href="http://localhost:50276/HomePage/HomePage">Home</a></li>
+                <li><a href="http://localhost:50276/Contact/Contact">Contact</a></li>
+                <li><a href="http://localhost:50276/Contact/AboutUs">About Us</a></li>
+            </ul>
+        </div>
+
+        <div id="footerRight">
+            <ul>
+                <li><a href="https://tr-tr.facebook.com/"> <img src="~/Content/images/facebook.png" width="15px" class="left" />Facebook</a></li>
+                <li><a href="https://twitter.com/login?lang=tr"><img src="~/Content/images/twitter.png" width="15px" class="left" />Twitter</a></li>
+            </ul>
+        </div>
+
+
+    </div>
+</body>
+</html>

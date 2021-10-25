@@ -1,0 +1,160 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Contact</title>
+    <link rel="shortcut icon" href="~/Content/images/icon.ico">
+    <link href="~/HomePageStyle.css" rel="stylesheet" />
+    <script src="~/Content/Clock.js"></script>
+</head>
+<body onload="startTime()">
+    <div>
+
+        <div id="navBar">
+            <ul>
+                <li><a href="http://localhost:50276/HomePage/HomePage">Home</a></li>
+                <li><a href="http://localhost:50276/RailSystem/RailSystem">Rail Systems</a></li>
+                <li><a href="http://localhost:50276/MetrobusLine/MetrobusLine">Metrobus Lines</a></li>
+                <li><a href="http://localhost:50276/BusLine/BusLine">Bus Lines</a></li>
+                <li><a href="http://localhost:50276/FerryLine/FerryLine">Ferry Lines</a></li>
+                <li><a href="http://localhost:50276/Contact/Contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div id="navBarRight">
+            <ul>
+                <li id="clock"></li>
+            </ul>
+        </div>
+
+        <div id="leftArea">
+            <div id="navBar1">
+                <ul>
+                    <li><img src="~/Content/images/IETTLogo.png" width="100%" /></li>
+                    <li><br /></li>
+                    <li><br /></li>
+                    <li> <img src="~/Content/images/MetroIstanbulLogo.png" width="100%" /> </li>
+                    <li><br /></li>
+                    <li><br /></li>
+                    <li> <img src="~/Content/images/SehirHatlarıLogo.png" width="100%" /> </li>
+                    <li><br /></li>
+                    <li><br /></li>
+                    <li><br /></li>
+                    <li><br /></li>
+                    <li> <img src="~/Content/images/BeyazMasaLogo.png" width="100%" /> </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CSS Code: Place this code in the document's head (between the <head> -- </head> tags) -->
+        <style>
+            table.customTable {
+                width: 100%;
+                background-color: #FFFFFF;
+                border-collapse: collapse;
+                border-width: 2px;
+                border-color: #FFCA28;
+                border-style: solid;
+                color: #000000;
+            }
+
+                table.customTable td, table.customTable th {
+                    border-width: 2px;
+                    border-color: #FFCA28;
+                    border-style: solid;
+                    padding: 5px;
+                }
+
+                table.customTable thead {
+                    background-color: #FFCA28;
+                }
+        </style>
+
+        <div id="middleArea">
+            <table class="customTable">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Phone Number</th>
+                        <th>Fax Number</th>
+                        <th>Address</th>
+                        <th>E-mail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>IETT</th>
+                        <td>+90 212 372 22 22</td>
+                        <td>+90 212 243 08 83</td>
+                        <td>Şahkulu Mah. Erkân-ı Harp Sok. No:2 Tünel 34421 Beyoğlu / İSTANBUL</td>
+                        <td>iett@iett.gov.tr</td>
+                    </tr>
+                    <tr>
+                        <th>Metro İstanbul</th>
+                        <td>+90 212 568 99 70</td>
+                        <td>+90 212 568 89 00</td>
+                        <td>Yavuz Selim Mahallesi Metro Sokak No: 3 Esenler / İSTANBUL</td>
+                        <td>info@metro.istanbul</td>
+                    </tr>
+                    <tr>
+                        <th>Şehir Hatları</th>
+                        <td>+90 212 313 80 00</td>
+                        <td>+90 212 253 94 75</td>
+                        <td>Bedrettin Mh. Evliya Çelebi Cad. No: 63 / A ( Haliç Tersanesi ) Kasımpaşa Beyoğlu / İSTANBUL</td>
+                        <td>info@sehirhatlari.istanbul</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="rightArea">
+            <div id="navBar1">
+                <ul>
+                    <li><img src="~/Content/images/IETTLogo.png" width="100%" /></li>
+                    <li><br /></li>
+                    <li><br /></li>
+                    <li> <img src="~/Content/images/MetroIstanbulLogo.png" width="100%" /> </li>
+                    <li><br /></li>
+                    <li><br /></li>
+                    <li> <img src="~/Content/images/SehirHatlarıLogo.png" width="100%" /> </li>
+                    <li><br /></li>
+                    <li><br /></li>
+                    <li><br /></li>
+                    <li><br /></li>
+                    <li> <img src="~/Content/images/BeyazMasaLogo.png" width="100%" /> </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="footerLeft">
+            <ul>
+                <li><a href="https://www.iett.istanbul/">IETT</a></li>
+                <li><a href="https://www.metro.istanbul/">Metro İstanbul</a></li>
+                <li><a href="https://www.sehirhatlari.istanbul/">Şehir Hatları</a></li>
+                <li><a href="https://beyazmasa.ibb.istanbul/application/beyazmasa">Beyaz Masa</a></li>
+            </ul>
+        </div>
+
+        <div id="footerMiddle">
+            <ul>
+                <li><a href="http://localhost:50276/HomePage/HomePage">Home</a></li>
+                <li><a href="http://localhost:50276/Contact/Contact">Contact</a></li>
+                <li><a href="http://localhost:50276/Contact/AboutUs">About Us</a></li>
+            </ul>
+        </div>
+
+        <div id="footerRight">
+            <ul>
+                <li><a href="https://tr-tr.facebook.com/"> <img src="~/Content/images/facebook.png" width="15px" class="left" />Facebook</a></li>
+                <li><a href="https://twitter.com/login?lang=tr"><img src="~/Content/images/twitter.png" width="15px" class="left" />Twitter</a></li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>

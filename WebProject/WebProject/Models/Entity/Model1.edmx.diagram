@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="153672092c1d4fb9904519c32ef98b5d" Name="Diagram1">
+        <EntityTypeShape EntityType="TransportSystemModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.Bus_Lines" Width="1.5" PointX="5.75" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.Buses" Width="1.5" PointX="8.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.BusLines_Buses" Width="1.5" PointX="11" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.BusLines_Drivers" Width="1.5" PointX="8" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.BusLines_Stations" Width="1.5" PointX="8" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.BusLines_Times" Width="1.5" PointX="8" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.Department" Width="1.5" PointX="1.5" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.Drivers" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.Ferries" Width="1.5" PointX="16" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.Ferry_Lines" Width="1.5" PointX="13.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.FerryLines_Drivers" Width="1.5" PointX="16" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.FerryLines_Stations" Width="1.5" PointX="16" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.FerryLines_Times" Width="1.5" PointX="16" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.Metrobus_Lines" Width="1.5" PointX="8.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.MetrobusLines_Buses" Width="1.5" PointX="11" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.MetrobusLines_Drivers" Width="1.5" PointX="11" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.MetrobusLines_Stations" Width="1.5" PointX="11" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.MetrobusLines_Times" Width="1.5" PointX="11" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.Rail_Systems" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.RailSystems_Drivers" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.RailSystems_Stations" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.RailSystems_Times" Width="1.5" PointX="3" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.RailSystems_Transfers" Width="1.5" PointX="6" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.Stations" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.Times" Width="1.5" PointX="0.75" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.Trains" Width="1.5" PointX="3" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.ShowBusInfoAboutBusLines" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.ShowBusInfoAboutMetrobusLines" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.ShowBusLinesInfoAboutDriver" Width="1.5" PointX="3.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.ShowDepartmentInfoAboutDriver" Width="1.5" PointX="13.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.ShowFerryInfoAboutFerryLines" Width="1.5" PointX="15.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.ShowFerryLinesInfoAboutDriver" Width="1.5" PointX="17.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.ShowMetrobusLinesInfoAboutDriver" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.ShowRailSystemsInfoAboutDriver" Width="1.5" PointX="18.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.ShowStationInfoAboutBusLines" Width="1.5" PointX="18.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.ShowStationInfoAboutFerryLines" Width="1.5" PointX="18.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.ShowStationInfoAboutMetrobusLines" Width="1.5" PointX="10.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.ShowStationInfoAboutRailSystems" Width="1.5" PointX="18.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.ShowTimeInfoAboutBusLines" Width="1.5" PointX="12.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.ShowTimeInfoAboutFerryLines" Width="1.5" PointX="14.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.ShowTimeInfoAboutMetrobusLines" Width="1.5" PointX="16.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.ShowTimeInfoAboutRailSystems" Width="1.5" PointX="18.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.ShowTrainInfoAboutRailSystems" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportSystemModel.ShowTransferInfo" Width="1.5" PointX="19.75" PointY="15.75" IsExpanded="true" />
+        <AssociationConnector Association="TransportSystemModel.FK__BusLines___LineI__07C12930" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__BusLines___LineI__17036CC0" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__BusLines___LineI__282DF8C2" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__BusLines___LineI__6E01572D" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__BusLines___BusID__17F790F9" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__MetrobusL__BusID__14270015" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__BusLines___Drive__2739D489" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__BusLines___Stati__6EF57B66" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__BusLines___TimeI__08B54D69" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__Drivers__Departm__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__FerryLine__Drive__2B0A656D" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__MetrobusL__Drive__236943A5" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__RailSyste__Drive__1F98B2C1" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__Ferries__LineID__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__FerryLine__LineI__03F0984C" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__FerryLine__LineI__2BFE89A6" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__FerryLine__LineI__6A30C649" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__FerryLine__Stati__6B24EA82" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__FerryLine__TimeI__04E4BC85" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__MetrobusL__LineI__00200768" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__MetrobusL__LineI__1332DBDC" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__MetrobusL__LineI__245D67DE" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__MetrobusL__LineI__66603565" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__MetrobusL__Stati__6754599E" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__MetrobusL__TimeI__01142BA1" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__RailSyste__FromL__1AD3FDA4" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__RailSyste__LineI__208CD6FA" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__RailSyste__LineI__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__RailSyste__LineI__7C4F7684" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__RailSyste__ToLin__1BC821DD" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__Trains__LineID__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__RailSyste__Stati__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__RailSyste__TimeI__7D439ABD" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportSystemModel.FK__RailSyste__Stati__1CBC4616" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
